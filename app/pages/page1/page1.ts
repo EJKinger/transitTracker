@@ -4,7 +4,7 @@ import {Http, HTTP_PROVIDERS} from 'angular2/http';
 
 @Page({
   templateUrl: 'build/pages/page1/page1.html',
-  constructor: {config: config}
+  constructor: {config: config, http: Http}
   
 })
 export class Page1 {

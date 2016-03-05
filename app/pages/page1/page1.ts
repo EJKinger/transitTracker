@@ -8,7 +8,7 @@ import {Http, HTTP_PROVIDERS} from 'angular2/http';
 })
 export class Page1 {
   constructor(http: Http) {
-    http.get('http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=' + Window.MartaApiKey)
-    .map(res => console.log(res));
+    var url = 'http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=' + Window.MartaApiKey; 
+    http.get(url).subscribe({next: (value) => console.log(value)});
   }
 }

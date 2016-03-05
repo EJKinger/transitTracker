@@ -1,5 +1,10 @@
 module.exports = {
-  proxies: null,
+  proxies: [
+    {
+      path: "/marta",
+      proxyUrl: "http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=" + MartaApiKey
+    }
+  ],
 
   paths: {
     html : {

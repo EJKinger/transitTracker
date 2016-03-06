@@ -10,6 +10,8 @@ export class Page1 {
   data: any
   constructor(private _http: Http, private _config: Config) {}
   getData() {
-    this._http.get('/marta').subscribe(data => this.data = data);
+    var url = 'http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=' + this._config.getMartaApiKey();
+    // var url = 'http://developer.itsmarta.com/BRDRestService/BRDRestService.svc/GetAllBus';
+    this._http.get(url + '.json').subscribe(data => this.data = JSON.stringify(data));
   }
 }

@@ -1,8 +1,6 @@
 import {App, Platform} from 'ionic-framework/ionic';
 import {TabsPage} from './pages/tabs/tabs';
 import {HTTP_PROVIDERS} from 'angular2/http';
-import {Config} from './config';
-
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
